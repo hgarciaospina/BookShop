@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
@@ -47,10 +48,10 @@ public class Book {
 	private String image;
 	
 	@ManyToOne
-	@Column(nullable = false)
+	@JoinColumn(name = "category_id", nullable = false)
 	private Category category;
 	
 	@ManyToOne
-	@Column(nullable = false)
+	@JoinColumn(name = "author_id", nullable = false)
 	private Author author;
 }
