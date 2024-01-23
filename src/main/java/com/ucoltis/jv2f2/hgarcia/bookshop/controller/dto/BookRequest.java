@@ -2,9 +2,6 @@ package com.ucoltis.jv2f2.hgarcia.bookshop.controller.dto;
 
 import java.time.LocalDate;
 
-import com.ucoltis.jv2f2.hgarcia.bookshop.model.entity.Author;
-import com.ucoltis.jv2f2.hgarcia.bookshop.model.entity.Category;
-
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
@@ -33,7 +30,7 @@ public class BookRequest {
 	
 	private String image;
 	
-	private Category category;
+	private Long categoryId;
 	
-	private Author author;
+	private Long authorId;
 }

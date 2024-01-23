@@ -47,8 +47,10 @@ public class Book {
 	private String image;
 	
 	@ManyToOne
+	@Column(nullable = false)
 	private Category category;
 	
 	@ManyToOne
+	@Column(nullable = false)
 	private Author author;
 }

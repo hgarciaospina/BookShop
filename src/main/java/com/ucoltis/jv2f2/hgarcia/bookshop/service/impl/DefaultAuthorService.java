@@ -85,7 +85,6 @@ public class DefaultAuthorService implements AuthorService {
 	    	throw new BadArgumentException(INVALID_PARAMETER_CODE, INVALID_PARAMETER_MESSAGE);		
 	    }
 		
-		
 		if(authorRequest == null ) {
 			throw new BadArgumentException( AUTHOR_INFO_REQUIRED_CODE,  AUTHOR_INFO_REQUIRED_MESSAGE);		
 		} 
@@ -116,8 +115,6 @@ public class DefaultAuthorService implements AuthorService {
 		 authorRepository.save(existingAuthor);
 		 
 		 return modelMapper.map(existingAuthor, AuthorResponse.class);
-	    
-	    
 	}
 
 	@Override
@@ -125,8 +122,7 @@ public class DefaultAuthorService implements AuthorService {
 		authorRepository.findById(id)	                
 	            .orElseThrow(() -> new NotFoundException( AUTHOR_NOT_FOUND_CODE,  AUTHOR_NOT_FOUND_MESSAGE + id));
 		
-		authorRepository.deleteById(id);
-		
+		authorRepository.deleteById(id);	
 	}
 
 }
