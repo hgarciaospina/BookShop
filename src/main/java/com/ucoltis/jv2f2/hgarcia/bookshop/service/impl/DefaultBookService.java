@@ -201,10 +201,10 @@ public class DefaultBookService implements BookService {
 		 }
 		 
 		 var category = categoryRepository.findById(bookRequest.getCategoryId())
-	            .orElseThrow(() -> new NotFoundException(CATEGORY_NOT_FOUND_CODE, CATEGORY_NOT_FOUND_MESSAGE + id));
+	            .orElseThrow(() -> new NotFoundException(CATEGORY_NOT_FOUND_CODE, CATEGORY_NOT_FOUND_MESSAGE + bookRequest.getCategoryId()));
 		 
 		 var author = authorRepository.findById(bookRequest.getAuthorId())
-		            .orElseThrow(() -> new NotFoundException(AUTHOR_NOT_FOUND_CODE, AUTHOR_NOT_FOUND_MESSAGE + id));
+		            .orElseThrow(() -> new NotFoundException(AUTHOR_NOT_FOUND_CODE, AUTHOR_NOT_FOUND_MESSAGE + bookRequest.getAuthorId()));
 		 
 		 existingBook.setTitle(bookRequest.getTitle());
 		 existingBook.setDescription(bookRequest.getDescription());
