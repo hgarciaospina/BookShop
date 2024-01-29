@@ -25,7 +25,6 @@ public class BookRequest {
 	
 	private Integer pages;
 	
-	@Temporal(TemporalType.DATE)
 	private LocalDate releaseDate;
 	
 	private String image;
