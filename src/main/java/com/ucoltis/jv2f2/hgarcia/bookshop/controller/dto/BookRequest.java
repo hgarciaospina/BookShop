@@ -2,8 +2,6 @@ package com.ucoltis.jv2f2.hgarcia.bookshop.controller.dto;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
